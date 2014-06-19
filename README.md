@@ -3,7 +3,7 @@ Web Application Boilerplate (WAB)
 
 Boilerplate template to kickstart a web application. Including Sass, Grunt, LiveReload...
 
-## Includes:
+### Includes:
 * FontAwesome   -   v.4.0.3
 * jQuery        -   v.1.11.1
 * Sass          -   v.?
@@ -11,23 +11,23 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 * LiveReload    -   v.?
 
 
-## Initialization:
+### Initialization:
 
-### #1 Clone the repository into your desired location:
+### .1 Clone the repository into your desired location:
 <code>git clone https://github.com/Gogoro/wab.git</code>
 
-### #2 Change git remote path to your decired location
+### 2. Change git remote path to your decired location
 <code>git remote set-url urlhere.git</code>
 
-### #3 Link your vHost to the app folder
+### 3. Link your vHost to the app folder
 
-### #3 Install dependencies in your project root with the following shell command
+### 3. Install dependencies in your project root with the following shell command
 <code>npm install</code>
 
-### #4 Run grunt with the following shell command
+### 4. Run grunt with the following shell command
 <code>grunt</code>
 
-## Webapp structure
+### Webapp structure
 
 Write more about the layout
 
@@ -59,7 +59,7 @@ Root /
 
 
 
-## Structure a sass project, the sass way
+### Structure a sass project, the sass way
 
 Consitentcy is key, ey? That's why we are going to follow this structure when we are developing apps in sass.
 (Needs to be updated)
