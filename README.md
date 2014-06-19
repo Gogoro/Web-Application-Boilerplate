@@ -8,7 +8,10 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 *#1* Clone the repository into your desired location:
 <code>git clone https://github.com/Gogoro/wab.git</code>
 
-*#2* Link your vHost to the app folder
+*#2* Change git remote path to your decired location
+<code>git remote set-url urlhere.git</code>
+
+*#3* Link your vHost to the app folder
 
 *#3* Install dependencies in your project root with the following shell command
 <code>npm install</code>
@@ -24,6 +27,37 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 * Grunt         -   v.?
 * LiveReload    -   v.?
 
+**Webapp structure**
+
+Write more about the layout
+
+```
+Root /
+|
+|-- app/              # Common modules
+|   |-- _all.scss         # Include to get all modules
+|   |-- _utility.scss     # Module name
+|   |-- _colors.scss      # Etc...
+|   ...
+|
+|-- partials/             # Partials
+|   |-- _base.sass        # imports for all mixins + global project variables
+|   |-- _buttons.scss     # buttons
+|   |-- _figures.scss     # figures
+|   |-- _grids.scss       # grids
+|   |-- _typography.scss  # typography
+|   |-- _reset.scss       # reset
+|   ...
+|
+|-- vendor/               # CSS or Sass from other projects
+|   |-- _colorpicker.scss
+|   |-- _jquery.ui.core.scss
+|   ...
+|
+`-- main.scss            # primary Sass file
+```
+
+
 
 **Structure a sass project, the sass way**
 
@@ -31,7 +65,7 @@ Consitentcy is key, ey? That's why we are going to follow this structure when we
 (Needs to be updated)
 
 ```
-    stylesheets/
+stylesheets/
 |
 |-- modules/              # Common modules
 |   |-- _all.scss         # Include to get all modules
