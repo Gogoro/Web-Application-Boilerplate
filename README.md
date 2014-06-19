@@ -30,7 +30,7 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 Consitentcy is key, ey? That's why we are going to follow this structure when we are developing apps in sass.
 (Needs to be updated)
 
-<quote>
+<code>
     stylesheets/
 |
 |-- modules/              # Common modules
@@ -54,7 +54,7 @@ Consitentcy is key, ey? That's why we are going to follow this structure when we
 |   ...
 |
 `-- main.scss            # primary Sass file
-</quote>
+</code>
 
 <a href="http://thesassway.com/beginner/how-to-structure-a-sass-project"> Read the article for more information. </a>
 
