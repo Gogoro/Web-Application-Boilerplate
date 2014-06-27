@@ -11,7 +11,7 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 * LiveReload    -   v.?
 
 
-### Initialization:
+### Initialization [MAC os X]:
 
 1. Clone the repository into your desired location:
    <code>git clone https://github.com/Gogoro/wab.git</code>
@@ -41,43 +41,15 @@ Project root /
 |   |   |-- images/             # ...
 |   |   |-- js/                 # ...
 |   |   |-- sass/               # ...
-|   `-- index.html              # ...
+|   |-- html/
+|   |   |-- partials/           # Partials to making faster and better templates
+|   |   |   |-- header.html     # Header template
+|   |   |   |-- footer.html     # Footer template
+|   |   `-- index.html          # Template files
+|   `-- index.html              # Generated index file
 `-- gruntfile.js
 |
 `-- package.json                # CSS or Sass from other projects
-```
-
-
-
-### Structure a sass project, the sass way
-
-Consitentcy is key, ey? That's why we are going to follow this structure when we are developing apps in sass.
-(Needs to be updated)
-
-```
-stylesheets/
-|
-|-- modules/              # Common modules
-|   |-- _all.scss         # Include to get all modules
-|   |-- _utility.scss     # Module name
-|   |-- _colors.scss      # Etc...
-|   ...
-|
-|-- partials/             # Partials
-|   |-- _base.sass        # imports for all mixins + global project variables
-|   |-- _buttons.scss     # buttons
-|   |-- _figures.scss     # figures
-|   |-- _grids.scss       # grids
-|   |-- _typography.scss  # typography
-|   |-- _reset.scss       # reset
-|   ...
-|
-|-- vendor/               # CSS or Sass from other projects
-|   |-- _colorpicker.scss
-|   |-- _jquery.ui.core.scss
-|   ...
-|
-`-- main.scss            # primary Sass file
 ```
 
 <a href="http://thesassway.com/beginner/how-to-structure-a-sass-project"> Read the article for more information. </a>
