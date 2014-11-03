@@ -3,7 +3,7 @@ Web Application Boilerplate (WAB)
 
 Boilerplate template to kickstart a web application. Including Sass, Grunt, LiveReload...
 
-### Includes:
+## Includes:
 * FontAwesome   -   v.4.0.3
 * jQuery        -   v.1.11.1
 * Sass          -   v.?
@@ -11,7 +11,7 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 * LiveReload    -   v.?
 
 
-### Initialization [MAC os X]:
+## Initialization [MAC os X]:
 
 1. Clone the repository into your desired location:
    <code>git clone https://github.com/Gogoro/wab.git</code>
@@ -19,7 +19,7 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 2. Change git remote path to your decired location
    <code>git remote set-url urlhere.git</code>
 
-3. Link your vHost to the app folder
+3. Link your viritual host root to the app folder
 
 3. Install dependencies in your project root with the following shell command
    <code>npm install</code>
@@ -27,30 +27,30 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 4. Run grunt with the following shell command
    <code>grunt</code>
 
-### Webapp structure
+## WAB Structure
 
-Write more about the layout
+The WAB structure is made to kickstart the development process, and fit every small project.
 
 ```
 Project root /
 |
-|-- app/                        # Common modules
+|-- app/                        # Basically your application files
 |   |-- assets/
 |   |   |-- css/
-|   |   |-- fonts/              # font collection
-|   |   |-- images/             # ...
-|   |   |-- js/                 # ...
-|   |   |-- sass/               # ...
+|   |   |-- fonts/
+|   |   |-- images/
+|   |   |-- js/
+|   |   |-- sass/
+|   |
 |   |-- html/
-|   |   |-- partials/           # Partials to making faster and better templates
-|   |   |   |-- header.html     # Header template
-|   |   |   |-- footer.html     # Footer template
-|   |   `-- index.html          # Template files
+|   |   |-- partials/           # Using partials makes creating templates faster than ever
+|   |   |   `-- header.html     # partial header file included in index.html
+|   |   `-- index.html          # index file - includes partials
 |   `-- index.html              # Generated index file
-`-- gruntfile.js
 |
-`-- package.json                # CSS or Sass from other projects
+`-- gruntfile.js                # Gruntfile controlling your grunt command
+|
+`-- package.json                # Dependency map
 ```
 
-<a href="http://thesassway.com/beginner/how-to-structure-a-sass-project"> Read the article for more information. </a>
-
+Read this article if you are interested in how to structure a <a href="http://thesassway.com/beginner/how-to-structure-a-sass-project">sass</a> project.
