@@ -3,7 +3,7 @@ Web Application Boilerplate (WAB)
 
 Boilerplate template to kickstart a web application. Including Sass, Grunt, LiveReload...
 
-## Includes:
+#### Includes:
 * FontAwesome   -   v.4.0.3
 * jQuery        -   v.1.11.1
 * Sass          -   v.?
@@ -11,7 +11,7 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 * LiveReload    -   v.?
 
 
-## Initialization [MAC os X]:
+### Initialization [MAC os X]:
 
 1. Clone the repository into your desired location:
    <code>git clone https://github.com/Gogoro/wab.git</code>
@@ -27,7 +27,7 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 4. Run grunt with the following shell command
    <code>grunt</code>
 
-## WAB Structure
+### WAB Structure
 
 The WAB structure is made to kickstart the development process, and fit every small project.
 
