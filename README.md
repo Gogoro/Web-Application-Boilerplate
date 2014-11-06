@@ -4,6 +4,7 @@ Web Application Boilerplate (WAB)
 Boilerplate template to kickstart a web application. Including Sass, Grunt, LiveReload...
 
 #### Includes:
+* Bootstrap   -   v.?
 * FontAwesome   -   v.4.0.3
 * jQuery        -   v.1.11.1
 * Sass          -   v.?
