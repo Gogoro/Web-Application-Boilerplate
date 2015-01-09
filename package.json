@@ -1,16 +1,25 @@
 {
   "name": "wab",
-  "version": "0.0.1",
-  "main": "gruntfile.js",
-  "author": "Ole A J Herland",
-  "dependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-compass": "^0.8.0",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-uglify": "^0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-prettify": "^0.3.5",
-    "grunt-processhtml": "^0.3.3"
+  "version": "0.0.0",
+  "description": "Web Application Boilerplate (WAB) =================================",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gogoro/wab.git"
+  },
+  "author": "Ole Andreas Jørnsen Herland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gogoro/wab/issues"
+  },
+  "homepage": "https://github.com/Gogoro/wab",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-sass": "^1.2.4",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-livereload": "^3.2.0"
   }
 }

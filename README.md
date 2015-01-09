@@ -1,14 +1,11 @@
 Web Application Boilerplate (WAB)
 =================================
 
-Boilerplate template to kickstart a web application. Including Sass, Grunt, LiveReload...
+Boilerplate template to kickstart your web application.
 
 #### Includes:
-* Bootstrap   -   v.?
-* FontAwesome   -   v.4.0.3
-* jQuery        -   v.1.11.1
 * Sass          -   v.?
-* Grunt         -   v.?
+* Gulp         -   v.?
 * LiveReload    -   v.?
 
 
@@ -25,8 +22,9 @@ Boilerplate template to kickstart a web application. Including Sass, Grunt, Live
 3. Install dependencies in your project root with the following shell command
    <code>npm install</code>
 
-4. Run grunt with the following shell command
-   <code>grunt</code>
+4. Run gulp with the following shell command
+   <code>gulp</code>
+   NB: if you get an gulp not found error, try <code>npm install -g gulp</code> 
 
 #### WAB Structure
 
@@ -35,23 +33,17 @@ The WAB structure is made to kickstart the development process, and fit every sm
 ```
 Project root /
 |
-|-- app/                        # Basically your application files
+|-- app/
 |   |-- assets/
 |   |   |-- css/
 |   |   |-- fonts/
-|   |   |-- images/
+|   |   |-- img/
 |   |   |-- js/
 |   |   |-- sass/
 |   |
-|   |-- html/
-|   |   |-- partials/           # Using partials makes creating templates faster than ever
-|   |   |   `-- header.html     # partial header file included in index.html
-|   |   `-- index.html          # index file - includes partials
-|   `-- index.html              # Generated index file
+|   `-- index.html
 |
-`-- gruntfile.js                # Gruntfile controlling your grunt command
+`-- gulpfile.js
 |
-`-- package.json                # Dependency map
+`-- package.json
 ```
-
-Read this article if you are interested in how to structure a <a href="http://thesassway.com/beginner/how-to-structure-a-sass-project">sass</a> project.
