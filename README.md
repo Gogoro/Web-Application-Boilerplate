@@ -9,7 +9,7 @@ Boilerplate template to kickstart your web application.
 * LiveReload    -   v.?
 
 
-#### Initialization [MAC os X]:
+#### Initialization [MAC osX and Linux]:
 
 1. Clone the repository into your desired location:
    <code>git clone https://github.com/Gogoro/wab.git</code>
@@ -24,7 +24,25 @@ Boilerplate template to kickstart your web application.
 
 4. Run gulp with the following shell command
    <code>gulp</code>
-   NB: if you get an gulp not found error, try <code>npm install -g gulp</code> 
+
+
+> Try <code>npm install -g gulp</code> if you have problems getting gulp to run.
+
+#### Initialization [Windows]:
+
+1. Clone the repository into your desired location:
+   <code>git clone https://github.com/Gogoro/wab.git</code>
+
+2. Change git remote path to your decired location
+   <code>git remote set-url urlhere.git</code>
+
+3. Link your viritual host root to the app folder.
+
+3. Install dependencies in your project root by running the **windows-install.bat** file.
+
+4. Run gulp by running the **windows-run.bat** file.
+
+> Try <code>npm install -g gulp</code> if you have problems getting gulp to run.
 
 #### WAB Structure
 
