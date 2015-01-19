@@ -66,7 +66,3 @@ Project root /
 `-- package.json
 ```
 
-
-### Future features
-
-* Make it posible to scaffold bootstrap and foundation
