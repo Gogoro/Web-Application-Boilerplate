@@ -1,12 +1,12 @@
 Web Application Boilerplate (WAB)
 =================================
 
-Boilerplate template to kickstart your web application.
+Welcome to WAB! A boilerplate to kickstart your web application.
 
 #### Includes:
-* Sass          -   v.?
-* Gulp         -   v.?
-* LiveReload    -   v.?
+* Gulp
+* Sass
+* LiveReload
 
 
 #### Initialization [MAC osX and Linux]:
@@ -65,3 +65,8 @@ Project root /
 |
 `-- package.json
 ```
+
+
+### Future features
+
+* Make it posible to scaffold bootstrap and foundation
