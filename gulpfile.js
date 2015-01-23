@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('sass', function () {
     gulp.src('./app/assets/scss/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass({errLogToConsole: true}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./app/assets/css'))
     .pipe(livereload());
