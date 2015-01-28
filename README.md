@@ -17,7 +17,7 @@ Website: [http://gogoro.github.io/Web-Application-Boilerplate](http://gogoro.git
    <code>git clone https://github.com/Gogoro/wab.git</code>
 
 2. Change git remote path to your decired location
-   <code>git remote set-url urlhere.git</code>
+   <code>git remote set-url origin urlhere.git</code>
 
 3. Link your viritual host root to the app folder
 
@@ -36,7 +36,7 @@ Website: [http://gogoro.github.io/Web-Application-Boilerplate](http://gogoro.git
    <code>git clone https://github.com/Gogoro/wab.git</code>
 
 2. Change git remote path to your decired location
-   <code>git remote set-url urlhere.git</code>
+   <code>git remote set-url origin urlhere.git</code>
 
 3. Link your viritual host root to the app folder.
 
