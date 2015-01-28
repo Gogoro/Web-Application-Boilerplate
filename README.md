@@ -3,6 +3,8 @@ Web Application Boilerplate (WAB)
 
 Welcome to WAB! A boilerplate to kickstart your web application.
 
+Website: [http://gogoro.github.io/Web-Application-Boilerplate](http://gogoro.github.io/Web-Application-Boilerplate)
+
 #### Includes:
 * Gulp
 * Sass
