@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload');
 
 gulp.task('sass', function () {
-    gulp.src('./app/assets/sass/*.scss')
+    console.log('yeh');
+    gulp.src(['./app/assets/sass/*.scss', './app/assets/sass/**/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({errLogToConsole: true}))
     .pipe(sourcemaps.write())
@@ -14,7 +15,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('./app/assets/sass/*.scss', ['sass']);
+    gulp.watch(['./app/assets/sass/*.scss', './app/assets/sass/**/*.scss'] , ['sass']);
 });
 
 gulp.task('default', ['sass', 'watch']);
