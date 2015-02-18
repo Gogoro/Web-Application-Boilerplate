@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload');
 
 gulp.task('sass', function () {
-    console.log('yeh');
     gulp.src(['./app/assets/sass/*.scss', './app/assets/sass/**/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({errLogToConsole: true}))
