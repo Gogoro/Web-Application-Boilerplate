@@ -1,1 +1,0 @@
-"use strict";function test(t,e,o){console.log(t+e+o)}console.log("test"),test("dette","er","en");

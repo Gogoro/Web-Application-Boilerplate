@@ -1,72 +1,65 @@
 
-// require node mudules
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    jslint = require('gulp-jslint'),
-    uglify = require('gulp-uglify'),
-    markdown = require('markdown'),
-    fileinclude = require('gulp-file-include'),
-    livereload = require('gulp-livereload');
+// Require modules
+var gulp = require('gulp'), // Gulp
+    sass = require('gulp-sass'), // Sass compiler
+    sourcemaps = require('gulp-sourcemaps'), // Sass sourcemaps
+    jslint = require('gulp-jslint'), // Lint that js
+    uglify = require('gulp-uglify'), // Make your javascript ugly and small
+    markdown = require('markdown'), // Markdown converter
+    fileinclude = require('gulp-file-include'), // You want html partials and markdown includes right?
+    livereload = require('gulp-livereload'); // Livereload - so that you don't have to pres cmd+R all night long
 
-
-// Run sass task - compiler + livereload
+// Sass task
 gulp.task('sass', function () {
-    gulp.src(['./app/assets/sass/*.scss', './app/assets/sass/**/*.scss'])
-        .pipe(sourcemaps.init())
-        .pipe(sass({errLogToConsole: true}))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/assets/css'))
-    .pipe(livereload());
+    gulp.src(['./app/sass/*.scss', './app/sass/**/*.scss']) // Files to be compiled
+        .pipe(sourcemaps.init()) // Sourcemaps so that you don't have to run around blind
+        .pipe(sass({errLogToConsole: true})) // Error logging to the console
+    .pipe(sourcemaps.write()) // Write sourcemaps
+    .pipe(gulp.dest('./public/assets/css')) // Placing the compiled CSS file where it needs to be
+    .pipe(livereload()); // Reload that browser
 });
 
-
-// Run javascript minify and concat
+// JavaScript task
 gulp.task('javascript', function(){
-    // Run jsLint and then uglify
-    gulp.src(['./app/assets/js/*.js', './app/assets/js/**/*.js'])
-        .pipe(jslint({
-            node: true,
-            evil: true,
-            nomen: true,
-            global: [],
-            reporter: 'default',
-            edition: '2014-07-08',
-            errorsOnly: false
+    gulp.src(['./app/js/*.js', './app/js/**/*.js']) // files to compile, check and minify
+        .pipe(jslint({ // Lint that javascript
+            node: true, // Read in the official JSLint documentation
+            evil: true, // Read in the official JSLint documentation
+            nomen: true, // Read in the official JSLint documentation
+            global: [], // Global declarations for all source files
+            reporter: 'default', // Pass your prefered reporter
+            edition: '2014-07-08', // specifiy custom jslint edition  by default, the latest edition will be used
+            errorsOnly: false // specify whether or not to show 'PASS' messages for built-in reporter
         }))
         .on('error', function (error) {
-            console.error(String(error));
-        });
-
-    gulp.src(['./app/assets/js/*.js', './app/assets/js/**/*.js'])
-        .pipe(uglify())
-        .pipe(gulp.dest('./public/assets/js'))
-	.pipe(livereload());
+            console.error(String(error)); // handle errors
+        })
+        .pipe(uglify()) // Uglify the Javascript, make it minifyed
+        .pipe(gulp.dest('./public/assets/js')) // Destination of the minifyed javascript
+	    .pipe(livereload()); // Reload that browser
 });
 
-
-// Run html partials task...
+// FileInclude task
 gulp.task('fileinclude', function() {
-  gulp.src(['./app/html/*.html'])
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file',
-        filters: {
-            markdown: markdown.parse
+  gulp.src(['./app/html/*.html']) // BASE files to watch
+    .pipe(fileinclude({ // Fill your base files with partials and other included files
+        prefix: '@@', // Prefix for basepath
+        basepath: '@file', // Default basepath
+        filters: { // Include filters
+            markdown: markdown.parse // Markdown parsing
         }
     }))
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/')) // Where to put your basefiles after being processed
+    .pipe(livereload()); // Reload that browser
 });
 
-
-// watch files an do what needs to be done.
+// Watch task
 gulp.task('watch', function () {
-    livereload.listen();
-    gulp.watch(['./app/assets/sass/*.scss', './app/assets/sass/**/*.scss'] , ['sass']);
-    gulp.watch(['./app/assets/js/*.js', './app/assets/js/**/*.js'], ['javascript']);
-    gulp.watch(['./app/html/*.html', './app/html/**/*.html'], ['fileinclude']);
+    livereload.listen(); // listen to any livereload triggers
+    gulp.watch(['./app/sass/*.scss', './app/sass/**/*.scss'] , ['sass']); // Run the sass task when sass files are being saved in the specified folders
+    gulp.watch(['./app/js/*.js', './app/js/**/*.js'], ['javascript']); // Run the javascript task when javascript files are being saved in the specified folders
+    gulp.watch(['./app/html/*.html', './app/html/**/*.html', './app/html/*.md', './app/html/**/*.md'], ['fileinclude']); // Run the fileinclude task when html or markdown files are being saved in the specified folders
 });
 
-
-// run the default tasks
+// Run all the default tasks
 gulp.task('default', ['sass', 'javascript', 'fileinclude', 'watch']);

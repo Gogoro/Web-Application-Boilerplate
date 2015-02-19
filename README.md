@@ -1,9 +1,7 @@
 Web Application Boilerplate (WAB)
 =================================
 
-Welcome to WAB! A boilerplate to kickstart your web application.
-
-Website: [http://gogoro.github.io/Web-Application-Boilerplate](http://gogoro.github.io/Web-Application-Boilerplate)
+Boilerplate to kickstart your web application.
 
 #### Includes:
 * Gulp
@@ -45,26 +43,3 @@ Website: [http://gogoro.github.io/Web-Application-Boilerplate](http://gogoro.git
 4. Run gulp by running the **windows-run.bat** file.
 
 > Try <code>npm install -g gulp</code> if you have problems getting gulp to run.
-
-#### WAB Structure
-
-The WAB structure is made to kickstart the development process, and fit every small project.
-
-```
-Project root /
-|
-|-- app/
-|   |-- assets/
-|   |   |-- css/
-|   |   |-- fonts/
-|   |   |-- img/
-|   |   |-- js/
-|   |   |-- sass/
-|   |
-|   `-- index.html
-|
-`-- gulpfile.js
-|
-`-- package.json
-```
-
