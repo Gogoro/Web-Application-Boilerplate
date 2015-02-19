@@ -1,13 +1,16 @@
-Web Application Boilerplate (WAB)
-=================================
+Web Application Boilerplate
+===========================
 
-Boilerplate to kickstart your web application.
+A boilerplate to kickstart your web application.
 
 #### Includes:
 * Gulp
 * Sass
+* Sourcemaps
+* JsLint
+* Uglify
+* Fileincluder (Templating with partials and markdown)
 * LiveReload
-
 
 #### Initialization [MAC osX and Linux]:
 
