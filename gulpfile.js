@@ -3,7 +3,7 @@
 var gulp = require('gulp'), // Gulp
     sass = require('gulp-sass'), // Sass compiler
     sourcemaps = require('gulp-sourcemaps'), // Sass sourcemaps
-    jslint = require('gulp-jslint'), // Lint that js
+    jshint = require('gulp-jshint'), // hint that js
     uglify = require('gulp-uglify'), // Make your javascript ugly and small
     markdown = require('markdown'), // Markdown converter
     fileinclude = require('gulp-file-include'), // You want html partials and markdown includes right?
@@ -22,7 +22,8 @@ gulp.task('sass', function () {
 // JavaScript task
 gulp.task('javascript', function(){
     gulp.src(['./app/js/*.js', './app/js/**/*.js']) // files to compile, check and minify
-        .pipe(jslint({ // Lint that javascript
+        /*
+	.pipe(jslint({ // Lint that javascript
             node: true, // Read in the official JSLint documentation
             evil: true, // Read in the official JSLint documentation
             nomen: true, // Read in the official JSLint documentation
@@ -34,6 +35,9 @@ gulp.task('javascript', function(){
         .on('error', function (error) {
             console.error(String(error)); // handle errors
         })
+	*/
+	.pipe(jshint()) // hint that js
+  	.pipe(jshint.reporter('default')) // use the deafult built in reporter
         .pipe(uglify()) // Uglify the Javascript, make it minifyed
         .pipe(gulp.dest('./public/assets/js')) // Destination of the minifyed javascript
 	    .pipe(livereload()); // Reload that browser
