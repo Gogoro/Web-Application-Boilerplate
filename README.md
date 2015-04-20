@@ -17,10 +17,10 @@ A boilerplate to kickstart your web application.
 1. Clone the repository into your desired location:
    <code>git clone https://github.com/Gogoro/wab.git</code>
 
-2. Change git remote path to your decired location
+2. Change git remote path to your desired location
    <code>git remote set-url origin urlhere.git</code>
 
-3. Link your viritual host root to the __public__ folder
+3. Link your virtual host root to the __public__ folder
 
 3. Install dependencies in your project root with the following shell command
    <code>npm install</code>
