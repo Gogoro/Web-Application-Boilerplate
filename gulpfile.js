@@ -4,6 +4,7 @@ var gulp = require('gulp'), // Gulp
     sass = require('gulp-sass'), // Sass compiler
     sourcemaps = require('gulp-sourcemaps'), // Sass sourcemaps
     jshint = require('gulp-jshint'), // hint that js
+    stylish = require('jshint-stylish'),
     uglify = require('gulp-uglify'), // Make your javascript ugly and small
     markdown = require('markdown'), // Markdown converter
     fileinclude = require('gulp-file-include'), // You want html partials and markdown includes right?
@@ -22,25 +23,12 @@ gulp.task('sass', function () {
 // JavaScript task
 gulp.task('javascript', function(){
     gulp.src(['./app/js/*.js', './app/js/**/*.js']) // files to compile, check and minify
-        /*
-	.pipe(jslint({ // Lint that javascript
-            node: true, // Read in the official JSLint documentation
-            evil: true, // Read in the official JSLint documentation
-            nomen: true, // Read in the official JSLint documentation
-            global: [], // Global declarations for all source files
-            reporter: 'default', // Pass your prefered reporter
-            edition: '2014-07-08', // specifiy custom jslint edition  by default, the latest edition will be used
-            errorsOnly: false // specify whether or not to show 'PASS' messages for built-in reporter
-        }))
-        .on('error', function (error) {
-            console.error(String(error)); // handle errors
-        })
-	*/
 	.pipe(jshint()) // hint that js
-  	.pipe(jshint.reporter('default')) // use the deafult built in reporter
-        .pipe(uglify()) // Uglify the Javascript, make it minifyed
-        .pipe(gulp.dest('./public/assets/js')) // Destination of the minifyed javascript
-	    .pipe(livereload()); // Reload that browser
+    .pipe(jshint.reporter('default')) // use the deafult built in reporter
+        .pipe(jshint.reporter(stylish)) // run the jshint'er with stylish reporter
+	.pipe(uglify()) // Uglify the Javascript, make it minifyed
+    .pipe(gulp.dest('./public/assets/js')) // Destination of the minifyed javascript
+    .pipe(livereload()); // Reload that browser
 });
 
 // FileInclude task
